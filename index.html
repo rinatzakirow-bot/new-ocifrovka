@@ -1190,15 +1190,6 @@
     </footer>
 
     <script>
-        const textToMagnify = "Готово уже завтра";
-        const container = document.getElementById('magnifyText');
-        textToMagnify.split('').forEach((char, index) => {
-            const span = document.createElement('span');
-            span.textContent = char === ' ' ? '\u00A0' : char;
-            span.style.animationDelay = `${index * 0.05}s`;
-            container.appendChild(span);
-        });
-
         function openTelegram() {
             const username = 'RinatZakiroff';
             const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
@@ -1244,6 +1235,8 @@
             }
         }
 
+        let currentModal = null;
+
         function toggleModal(id, show) {
             const modal = document.getElementById(id);
             if (!modal) return;
@@ -1255,6 +1248,8 @@
                     modal.classList.add('active');
                     if (content) content.classList.remove('fade-out');
                 });
+                currentModal = id;
+                history.pushState({ modal: id }, '', '');
             } else {
                 if (content) binaryDissolve(content);
                 if (content) content.classList.add('fade-out');
@@ -1265,9 +1260,16 @@
                     modal.style.opacity = '';
                     if (content) content.classList.remove('fade-out');
                     document.body.style.overflow = 'auto';
+                    currentModal = null;
                 }, 400);
             }
         }
+
+        window.addEventListener('popstate', function(event) {
+            if (currentModal) {
+                toggleModal(currentModal, false);
+            }
+        });
 
         function updateQty(type, delta) {
             quantities[type] = Math.max(0, quantities[type] + delta);
