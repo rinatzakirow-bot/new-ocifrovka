@@ -32,7 +32,7 @@
             letter-spacing: 0.01em;
             font-size: 16px;
             overflow-x: hidden;
-            background-color: #ffffff;
+            background-color: #fdfaf7;
             line-height: 1.6;
             color: #1a1a1a;
             -webkit-font-smoothing: antialiased;
@@ -47,13 +47,13 @@
         .title-flow-effect {
             background: linear-gradient(
                 to right,
-                #24A1DE 0%,
-                #24A1DE 35%,
-                #7dd3fc 45%,
+                #dc2626 0%,
+                #dc2626 35%,
+                #f87171 45%,
                 #ffffff 50%,
-                #7dd3fc 55%,
-                #24A1DE 65%,
-                #24A1DE 100%
+                #f87171 55%,
+                #dc2626 65%,
+                #dc2626 100%
             );
             background-size: 400% auto;
             color: transparent;
@@ -72,7 +72,7 @@
             .mobile-larger-text { font-size: 16px !important; letter-spacing: 0.1em !important; line-height: 1.6 !important; }
             .mobile-description { font-size: 18px !important; padding-left: 10px; padding-right: 10px; }
             .glass-block { padding-top: 2rem !important; padding-bottom: 2rem !important; border-radius: 32px !important; border-width: 3px !important; }
-            .soft-card-static { min-height: 90px !important; padding: 15px 10px !important; border-width: 3px !important; }
+            .soft-card-static { min-height: 180px !important; padding: 30px 20px !important; border-width: 3px !important; }
             .card-label { font-size: 16px !important; }
             .elegant-btn { font-size: 16px !important; padding: 24px 30px !important; }
             .premium-label-header { font-size: 8px !important; }
@@ -80,10 +80,10 @@
         }
         h1, h2, h3, .font-bold { font-weight: 600 !important; letter-spacing: 0.02em; }
         .thin-header { font-weight: 500 !important; text-transform: uppercase; }
-        .vhs-background { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: #ffffff; }
+        .vhs-background { position: fixed; inset: 0; z-index: -1; pointer-events: none; background: #fdfaf7; }
         .vhs-pattern {
             position: absolute; inset: 0; opacity: 0.04;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 100 60'%3E%3Cg fill='%23000000'%3E%3Cpath d='M10 10h80v40H10V10zm4 4v32h72V14H14z'/%3E%3Ccircle cx='35' cy='30' r='6'/%3E%3Ccircle cx='65' cy='30' r='6'/%3E%3Cpath d='M25 40h50v40H25z'/%3E%3C/g%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='80' viewBox='0 0 100 60'%3E%3Cg fill='%23dc2626'%3E%3Cpath d='M10 10h80v40H10V10zm4 4v32h72V14H14z'/%3E%3Ccircle cx='35' cy='30' r='6'/%3E%3Ccircle cx='65' cy='30' r='6'/%3E%3Cpath d='M25 40h50v40H25z'/%3E%3C/g%3E%3C/svg%3E");
             background-size: 120px 80px;
         }
         .glass-block {
@@ -116,11 +116,11 @@
                 filter: brightness(1.2);
             }
         }
-        .header-static-blue {
-            color: #24A1DE;
+        .header-static-red {
+            color: #dc2626;
         }
         .price-glass-reflection {
-            color: #24A1DE;
+            color: #dc2626;
             position: relative;
             display: inline-block;
             line-height: 1;
@@ -132,11 +132,11 @@
             display: inline-block;
             background: linear-gradient(
                 to right,
-                #24A1DE 0%,
-                #24A1DE 40%,
+                #dc2626 0%,
+                #dc2626 40%,
                 #ffffff 50%,
-                #24A1DE 60%,
-                #24A1DE 100%
+                #dc2626 60%,
+                #dc2626 100%
             );
             background-size: 200% auto;
             color: transparent;
@@ -151,7 +151,7 @@
         .icon-backdrop {
             width: 72px; height: 72px; background: #f8fafc; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            margin-bottom: 1.5rem; color: #24A1DE; font-size: 28px;
+            margin-bottom: 1.5rem; color: #dc2626; font-size: 28px;
         }
         .soft-card-static {
             background: #f8fafc;
@@ -159,13 +159,18 @@
             padding: 20px; display: flex; flex-direction: column; align-items: center;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
             gap: 12px;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .soft-card-static:hover {
+            transform: scale(1.05);
         }
         .cassette-type-img {
-            max-height: 100px;
+            max-height: 225px;
             object-fit: contain;
         }
         .cassette-type-title {
-            font-size: 14px;
+            font-size: 27px;
             text-transform: uppercase;
             letter-spacing: 0.1em;
             font-weight: 700;
@@ -229,7 +234,7 @@
             border-color: #0088CC;
         }
         .form-input { width: 100%; padding: 14px 20px; border: 3px solid #cbd5e1; background: #f8fafc; border-radius: 18px; font-size: 16px; outline: none; color: #000000; }
-        .form-input:focus { border-color: #24A1DE; }
+        .form-input:focus { border-color: #dc2626; }
         .tg-float {
             position: fixed;
             bottom: 24px;
@@ -305,7 +310,7 @@
             z-index: 10;
             padding: 24px 24px 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: flex-end;
             align-items: flex-start;
         }
         .modal-back-btn {
@@ -326,7 +331,7 @@
         }
         .modal-back-btn:hover {
             background: rgba(255, 255, 255, 0.35);
-            color: #24A1DE;
+            color: #dc2626;
         }
         .modal-close-btn {
             color: #94a3b8;
@@ -345,9 +350,6 @@
         @media (max-width: 480px) {
             .modal-header { padding: 20px 20px 0; }
             .modal-body { padding: 20px; }
-        }
-        #orderModal .modal-header {
-            justify-content: flex-end;
         }
         .glass-back-btn {
             display: inline-flex;
@@ -370,14 +372,14 @@
         }
         .glass-back-btn:hover {
             background: rgba(255, 255, 255, 0.35);
-            color: #24A1DE;
+            color: #dc2626;
         }
         .binary-particle {
             position: fixed;
             pointer-events: none;
             font-family: 'Courier New', monospace;
             font-weight: 700;
-            color: #24A1DE;
+            color: #dc2626;
             z-index: 9999;
             user-select: none;
             will-change: transform, opacity;
@@ -494,13 +496,13 @@
             width: 100%;
         }
         .faq-banner:hover {
-            border-color: #24A1DE;
+            border-color: #dc2626;
             background: #ffffff;
             transform: translateY(-2px);
             box-shadow: 0 10px 20px rgba(0,0,0,0.05);
         }
         .faq-banner i {
-            color: #24A1DE;
+            color: #dc2626;
             font-size: 20px;
         }
         .faq-banner span {
@@ -517,7 +519,7 @@
             transition: all 0.3s ease;
         }
         .review-card:hover {
-            border-color: #24A1DE;
+            border-color: #dc2626;
             background: #ffffff;
             transform: translateY(-4px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.06);
@@ -555,20 +557,21 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.04);
         }
         .cassette-detail-card:hover {
-            border-color: #24A1DE;
+            border-color: #dc2626;
             transform: translateY(-6px);
-            box-shadow: 0 20px 40px rgba(36,161,222,0.12);
+            box-shadow: 0 20px 40px rgba(220,38,38,0.12);
         }
         .cassette-detail-img {
             max-height: 200px;
             object-fit: contain;
-            margin-bottom: 24px;
+            margin: 0 auto 24px auto;
             border-radius: 16px;
+            display: block;
         }
         .cassette-detail-title {
             font-size: 1.5rem;
             font-weight: 700;
-            color: #24A1DE;
+            color: #dc2626;
             margin-bottom: 16px;
             text-transform: uppercase;
             letter-spacing: 0.05em;
@@ -576,7 +579,7 @@
         .cassette-detail-price {
             font-size: 2rem;
             font-weight: 700;
-            color: #24A1DE;
+            color: #dc2626;
             margin-top: 20px;
         }
         .equipment-img {
@@ -615,8 +618,16 @@
         }
         .modal-title-icon {
             font-size: 3.5rem;
-            color: #24A1DE;
+            color: #dc2626;
             margin-bottom: 1.5rem;
+        }
+        .single-cassette-modal .modal-content {
+            max-width: 600px;
+        }
+        .single-cassette-modal .modal-body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 </head>
@@ -669,27 +680,27 @@
                     </p>
                 </div>
                 <div class="max-w-4xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <div class="soft-card-static">
+                    <div class="soft-card-static" onclick="toggleModal('vhsModal', true)">
                         <img src="vhs.png" alt="VHS" class="cassette-type-img" loading="lazy">
                         <div class="cassette-type-title">VHS</div>
                     </div>
-                    <div class="soft-card-static">
+                    <div class="soft-card-static" onclick="toggleModal('vhscModal', true)">
                         <img src="vhc c.png" alt="VHS-C" class="cassette-type-img" loading="lazy">
                         <div class="cassette-type-title">VHS-C</div>
                     </div>
-                    <div class="soft-card-static">
+                    <div class="soft-card-static" onclick="toggleModal('video8Modal', true)">
                         <img src="8mm.png" alt="8mm" class="cassette-type-img" loading="lazy">
                         <div class="cassette-type-title">8mm</div>
                     </div>
-                    <div class="soft-card-static">
+                    <div class="soft-card-static" onclick="toggleModal('hi8Modal', true)">
                         <img src="hi8.png" alt="Hi8" class="cassette-type-img" loading="lazy">
                         <div class="cassette-type-title">Hi8</div>
                     </div>
-                    <div class="soft-card-static">
+                    <div class="soft-card-static" onclick="toggleModal('digital8Modal', true)">
                         <img src="digital8.png" alt="Digital8" class="cassette-type-img" loading="lazy">
                         <div class="cassette-type-title">Digital8</div>
                     </div>
-                    <div class="soft-card-static">
+                    <div class="soft-card-static" onclick="toggleModal('minidvModal', true)">
                         <img src="mini dv.png" alt="MiniDV" class="cassette-type-img" loading="lazy">
                         <div class="cassette-type-title">MiniDV</div>
                     </div>
@@ -822,7 +833,7 @@
                     </div>
                     <div class="review-card">
                         <div class="stars-gold">★★★★★</div>
-                        <p class="text-[14px] font-medium leading-relaxed mb-6 italic">"Нужно было срочно оцифровать 5 кассет MiniDV для фильма. Ринат сделал всё за сутки. Цвета сочные, звук чистый. Рекомендую как профессионала своего дела."</p>
+                        <p class="text-[14px] font-medium leading-relaxed mb-6 italic">"Нужно было срочно оцифровать 5 кассет MiniDV для фильма. Ринат сделал всё за сутки. Цвета сочные, звук чистый. Рекомендуйте как профессионала своего дела."</p>
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center font-bold text-slate-500">М</div>
                             <div class="text-left">
@@ -850,15 +861,10 @@
         </section>
     </main>
 
-    <!-- МОДАЛЬНЫЕ ОКНА (без изменений) -->
-    <!-- ... (все модальные окна оставлены точно как в оригинале) ... -->
-
+    <!-- МОДАЛЬНЫЕ ОКНА -->
     <div id="reviewModal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <button onclick="toggleModal('reviewModal', false)" class="modal-back-btn" aria-label="Назад">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
                 <button onclick="toggleModal('reviewModal', false)" class="modal-close-btn" aria-label="Закрыть">
                     <i class="fas fa-times"></i>
                 </button>
@@ -896,13 +902,7 @@
                     <i class="fas fa-heart text-5xl mb-4 text-red-500"></i>
                     <h3 class="text-xl font-bold uppercase mb-2">Спасибо!</h3>
                     <p class="text-slate-500 uppercase text-[12px] font-bold mobile-larger-text">Ваш отзыв отправлен на модерацию</p>
-                    <button onclick="toggleModal('reviewModal', false)" class="mt-8 underline font-bold uppercase text-[11px] text-[#24A1DE] bg-transparent border-none cursor-pointer">Закрыть окно</button>
-                </div>
-                <div class="mt-12">
-                    <button onclick="toggleModal('reviewModal', false)" class="glass-back-btn">
-                        <i class="fas fa-arrow-left"></i>
-                        Назад
-                    </button>
+                    <button onclick="toggleModal('reviewModal', false)" class="mt-8 underline font-bold uppercase text-[11px] text-[#dc2626] bg-transparent border-none cursor-pointer">Закрыть окно</button>
                 </div>
             </div>
         </div>
@@ -937,7 +937,7 @@
                     <button type="submit" id="submitBtn" class="elegant-btn mt-2 !py-4">Отправить заявку</button>
                     <div class="flex flex-col items-center">
                         <div class="w-full h-[1px] bg-slate-100 my-4"></div>
-                        <span class="text-[10px] uppercase text-[#24A1DE] font-bold tracking-[0.2em] mb-1">или просто напишите</span>
+                        <span class="text-[10px] uppercase text-[#dc2626] font-bold tracking-[0.2em] mb-1">или просто напишите</span>
                         <button type="button" onclick="openTelegram()" class="elegant-btn btn-outline-tg !max-w-full !py-4 mt-0">
                             <i class="fab fa-telegram-plane"></i> В Telegram
                         </button>
@@ -947,7 +947,7 @@
                     <i class="fas fa-check-circle text-5xl mb-4 text-green-500"></i>
                     <h3 class="text-xl font-bold uppercase mb-2">Спасибо за заказ.</h3>
                     <p class="text-slate-500 uppercase text-[12px] font-bold mobile-larger-text">Сейчас Вам напишу</p>
-                    <button onclick="toggleModal('orderModal', false)" class="mt-8 underline font-bold uppercase text-[11px] text-[#24A1DE] bg-transparent border-none cursor-pointer">Закрыть окно</button>
+                    <button onclick="toggleModal('orderModal', false)" class="mt-8 underline font-bold uppercase text-[11px] text-[#dc2626] bg-transparent border-none cursor-pointer">Закрыть окно</button>
                 </div>
             </div>
         </div>
@@ -956,9 +956,6 @@
     <div id="detailedCassettesModal" class="modal-overlay">
         <div class="modal-content" style="max-width: 1200px; background: #f8fafc;">
             <div class="modal-header">
-                <button onclick="toggleModal('detailedCassettesModal', false)" class="modal-back-btn" aria-label="Назад">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
                 <button onclick="toggleModal('detailedCassettesModal', false)" class="modal-close-btn" aria-label="Закрыть">
                     <i class="fas fa-times"></i>
                 </button>
@@ -1004,12 +1001,6 @@
                         <div class="cassette-detail-price">до 1380 ₽</div>
                     </div>
                 </div>
-                <div class="mt-12">
-                    <button onclick="toggleModal('detailedCassettesModal', false)" class="glass-back-btn">
-                        <i class="fas fa-arrow-left"></i>
-                        Назад
-                    </button>
-                </div>
             </div>
         </div>
     </div>
@@ -1017,9 +1008,6 @@
     <div id="deliveryModal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <button onclick="toggleModal('deliveryModal', false)" class="modal-back-btn" aria-label="Назад">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
                 <button onclick="toggleModal('deliveryModal', false)" class="modal-close-btn" aria-label="Закрыть">
                     <i class="fas fa-times"></i>
                 </button>
@@ -1030,12 +1018,6 @@
                 <p class="text-lg leading-relaxed mb-6">Я бесплатно приеду за кассетами по любому адресу в пределах МКАД и привезу готовые файлы обратно.</p>
                 <p class="text-lg leading-relaxed mb-6">Если вам удобнее — можете привезти кассеты самостоятельно (адрес согласуем в переписке).</p>
                 <p class="text-lg leading-relaxed mb-8">Если адрес за пределами МКАД — работаю через доставку Яндекс Маркет (стоимость доставки оплачивается отдельно).</p>
-                <div class="mt-12">
-                    <button onclick="toggleModal('deliveryModal', false)" class="glass-back-btn">
-                        <i class="fas fa-arrow-left"></i>
-                        Назад
-                    </button>
-                </div>
             </div>
         </div>
     </div>
@@ -1043,9 +1025,6 @@
     <div id="formatModal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <button onclick="toggleModal('formatModal', false)" class="modal-back-btn" aria-label="Назад">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
                 <button onclick="toggleModal('formatModal', false)" class="modal-close-btn" aria-label="Закрыть">
                     <i class="fas fa-times"></i>
                 </button>
@@ -1056,12 +1035,6 @@
                 <p class="text-lg leading-relaxed mb-6">Файлы оцифровки запишу на Вашу флешку или отправлю ссылку на скачивание файлов оцифровки.</p>
                 <p class="text-lg leading-relaxed mb-6">Формат: MPG 720x576</p>
                 <p class="text-lg leading-relaxed mb-8">Это технический максимум того, что возможно получить с видеокассет. Кто-то обещает оцифровать кассеты в Full HD — это обман и не более чем маркетинг за исключением кассет mini DV записаных в формате full HD но такие встречаются крайне редко. С ними тоже работаю но стоимость оцифровки подобных кассет в два раза выше.</p>
-                <div class="mt-12">
-                    <button onclick="toggleModal('formatModal', false)" class="glass-back-btn">
-                        <i class="fas fa-arrow-left"></i>
-                        Назад
-                    </button>
-                </div>
             </div>
         </div>
     </div>
@@ -1069,9 +1042,6 @@
     <div id="podrobnoObOcifrovkeModal" class="modal-overlay">
         <div class="modal-content" style="max-width: 900px;">
             <div class="modal-header">
-                <button onclick="toggleModal('podrobnoObOcifrovkeModal', false)" class="modal-back-btn" aria-label="Назад">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
                 <button onclick="toggleModal('podrobnoObOcifrovkeModal', false)" class="modal-close-btn" aria-label="Закрыть">
                     <i class="fas fa-times"></i>
                 </button>
@@ -1086,12 +1056,6 @@
                         Скачайте файл: <a href="podrobno-ob-ocifrovke.mp4">podrobno-ob-ocifrovke.mp4</a>
                     </video>
                 </div>
-                <div class="mt-12">
-                    <button onclick="toggleModal('podrobnoObOcifrovkeModal', false)" class="glass-back-btn">
-                        <i class="fas fa-arrow-left"></i>
-                        Назад
-                    </button>
-                </div>
             </div>
         </div>
     </div>
@@ -1099,9 +1063,6 @@
     <div id="equipmentModal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <button onclick="toggleModal('equipmentModal', false)" class="modal-back-btn" aria-label="Назад">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
                 <button onclick="toggleModal('equipmentModal', false)" class="modal-close-btn" aria-label="Закрыть">
                     <i class="fas fa-times"></i>
                 </button>
@@ -1125,12 +1086,6 @@
                     <li>• Профессиональный уровень, проверенный десятилетиями в студиях и архивах — это «золотой стандарт» для оцифровки VHS и аналогичных форматов.</li>
                 </ul>
                 <p class="text-lg leading-relaxed mt-6 mb-8">Благодаря этому оборудованию я получаю максимально возможное качество с ваших кассет — лучше, чем у большинства сервисов.</p>
-                <div class="mt-12">
-                    <button onclick="toggleModal('equipmentModal', false)" class="glass-back-btn">
-                        <i class="fas fa-arrow-left"></i>
-                        Назад
-                    </button>
-                </div>
             </div>
         </div>
     </div>
@@ -1138,9 +1093,6 @@
     <div id="deadlineModal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <button onclick="toggleModal('deadlineModal', false)" class="modal-back-btn" aria-label="Назад">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
                 <button onclick="toggleModal('deadlineModal', false)" class="modal-close-btn" aria-label="Закрыть">
                     <i class="fas fa-times"></i>
                 </button>
@@ -1149,12 +1101,6 @@
                 <i class="fas fa-clock modal-title-icon"></i>
                 <h3 class="text-2xl font-bold uppercase tracking-wider mb-8">Срок исполнения</h3>
                 <p class="text-lg leading-relaxed mb-8">Если у Вас менее 6 кассет, то ссылочки на скачивание файлов оцифровки будут у Вас уже на следующий день. Если больше, то работа займет 2–3 дня.</p>
-                <div class="mt-12">
-                    <button onclick="toggleModal('deadlineModal', false)" class="glass-back-btn">
-                        <i class="fas fa-arrow-left"></i>
-                        Назад
-                    </button>
-                </div>
             </div>
         </div>
     </div>
@@ -1162,9 +1108,6 @@
     <div id="unknownModal" class="modal-overlay">
         <div class="modal-content">
             <div class="modal-header">
-                <button onclick="toggleModal('unknownModal', false)" class="modal-back-btn" aria-label="Назад">
-                    <i class="fas fa-arrow-left"></i>
-                </button>
                 <button onclick="toggleModal('unknownModal', false)" class="modal-close-btn" aria-label="Закрыть">
                     <i class="fas fa-times"></i>
                 </button>
@@ -1175,11 +1118,114 @@
                 <p class="text-lg leading-relaxed mb-6">Если у вас есть кассеты с неизвестным содержимым, я отправлю вам три скриншота с каждой из них. Как правило, этого достаточно, чтобы определить, нужна ли оцифровка.</p>
                 <p class="text-lg leading-relaxed mb-6">Стоимость опции: 300 ₽ за одну кассету.</p>
                 <p class="text-lg leading-relaxed mb-8">Если оцифровка не потребуется вовсе, заказ оценивается как минимальный т. е. 2070 ₽.</p>
-                <div class="mt-12">
-                    <button onclick="toggleModal('unknownModal', false)" class="glass-back-btn">
-                        <i class="fas fa-arrow-left"></i>
-                        Назад
-                    </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Individual cassette modals with NEW photos centered in upper part -->
+    <div id="vhsModal" class="modal-overlay single-cassette-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button onclick="toggleModal('vhsModal', false)" class="modal-close-btn" aria-label="Закрыть">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="cassette-detail-card">
+                    <img src="vhsn.jpg" alt="VHS кассета" class="cassette-detail-img" loading="lazy">
+                    <div class="cassette-detail-title">VHS</div>
+                    <p class="text-base leading-relaxed text-slate-700 mb-6">Стандартные полноразмерные кассеты VHS (Video Home System). Использовались в домашних видеомагнитофонах. Максимальная длительность записи — до 240 минут в режиме LP (long play).</p>
+                    <div class="cassette-detail-price">до 4140 ₽</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="vhscModal" class="modal-overlay single-cassette-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button onclick="toggleModal('vhscModal', false)" class="modal-close-btn" aria-label="Закрыть">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="cassette-detail-card">
+                    <img src="vhscn.jpg" alt="VHS-C кассета" class="cassette-detail-img" loading="lazy">
+                    <div class="cassette-detail-title">VHS-C</div>
+                    <p class="text-base leading-relaxed text-slate-700 mb-6">Компактная версия VHS для портативных видеокамер. Кассеты меньшего размера, для воспроизведения требуется адаптер в обычный VHS-плеер. Длительность записи — до 60 минут.</p>
+                    <div class="cassette-detail-price">до 1380 ₽</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="video8Modal" class="modal-overlay single-cassette-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button onclick="toggleModal('video8Modal', false)" class="modal-close-btn" aria-label="Закрыть">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="cassette-detail-card">
+                    <img src="video8n.jpg" alt="8mm (Video8) кассета" class="cassette-detail-img" loading="lazy">
+                    <div class="cassette-detail-title">8mm (Video8)</div>
+                    <p class="text-base leading-relaxed text-slate-700 mb-6">Аналоговый формат на 8-мм ленте, разработанный Sony. Компактные кассеты для камкордеров, хорошее качество изображения для своего времени. Длительность — до 120 минут.</p>
+                    <div class="cassette-detail-price">до 2070 ₽</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hi8Modal" class="modal-overlay single-cassette-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button onclick="toggleModal('hi8Modal', false)" class="modal-close-btn" aria-label="Закрыть">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="cassette-detail-card">
+                    <img src="hi8n.jpg" alt="Hi8 кассета" class="cassette-detail-img" loading="lazy">
+                    <div class="cassette-detail-title">Hi8</div>
+                    <p class="text-base leading-relaxed text-slate-700 mb-6">Улучшенная версия Video8 с повышенной полосой частот (High Band). Лучшая цветопередача и разрешение (около 400 строк) по сравнению с обычным Video8.</p>
+                    <div class="cassette-detail-price">до 2070 ₽</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="digital8Modal" class="modal-overlay single-cassette-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button onclick="toggleModal('digital8Modal', false)" class="modal-close-btn" aria-label="Закрыть">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="cassette-detail-card">
+                    <img src="digital8n.jpg" alt="Digital8 кассета" class="cassette-detail-img" loading="lazy">
+                    <div class="cassette-detail-title">Digital8</div>
+                    <p class="text-base leading-relaxed text-slate-700 mb-6">Цифровой формат на той же 8-мм ленте. Не совместим с аналоговыми Hi8/Video8 плеерами. Качество — стандарт DV (500 строк), длительность до 60 минут в цифровом режиме.</p>
+                    <div class="cassette-detail-price">до 2070 ₽</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="minidvModal" class="modal-overlay single-cassette-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button onclick="toggleModal('minidvModal', false)" class="modal-close-btn" aria-label="Закрыть">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="cassette-detail-card">
+                    <img src="minidvn.jpg" alt="MiniDV кассета" class="cassette-detail-img" loading="lazy">
+                    <div class="cassette-detail-title">MiniDV</div>
+                    <p class="text-base leading-relaxed text-slate-700 mb-6">Миниатюрные цифровые кассеты формата DV. Высокое качество видео (500 строк горизонтального разрешения), чистый звук. Использовались в цифровых камкордерах, длительность до 90 минут.</p>
+                    <div class="cassette-detail-price">до 1380 ₽</div>
                 </div>
             </div>
         </div>
