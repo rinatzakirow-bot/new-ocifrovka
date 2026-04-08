@@ -1146,7 +1146,54 @@
         .pointer-events-none { pointer-events: none !important; }
         /* active scale */
         .active\:scale-95:active { transform: scale(0.95) !important; }
+
+        /* ===== НАВИГАЦИЯ ПО РАЗДЕЛАМ ===== */
+        .page-subnav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 36px;
+        }
+        .page-subnav a {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: #64748b;
+            text-decoration: none;
+            border: 1px solid #e2e8f0;
+            border-radius: 100px;
+            padding: 6px 14px;
+            background: #ffffff;
+            transition: border-color 0.2s, color 0.2s;
+            white-space: nowrap;
+        }
+        .page-subnav a:hover {
+            border-color: #dc2626;
+            color: #dc2626;
+        }
     </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Главная",
+          "item": "https://rinatocifrovka.ru/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Все типы кассет",
+          "item": "https://rinatocifrovka.ru/tipy-kasset.html"
+        }
+      ]
+    }
+    </script>
 </head>
 <body>
 <header class="fixed w-full z-40 header-red-bg shadow-lg border-b border-red-700">
@@ -1174,6 +1221,16 @@
 <div class="vhs-background"><div class="vhs-pattern"></div></div>
 <main class="page-wrapper">
     <a href="index.html" class="page-back"><i class="fas fa-arrow-left"></i> На главную</a>
+<nav class="page-subnav" aria-label="Разделы сайта">
+    <a href="stoimost.html">Стоимость</a>
+    <a href="sroki.html">Сроки</a>
+    <a href="dostavka.html">Доставка</a>
+    <a href="format.html">Форматы</a>
+    <a href="oborudovanie.html">Оборудование</a>
+    <a href="otzyv.html">Отзывы</a>
+    <a href="remont.html">Ремонт</a>
+    <a href="zakazat.html">Заказать</a>
+</nav>
     <i class="fas fa-info-circle page-icon"></i>
     <h1 class="page-title">Подробно о типах кассет</h1>
 <p class="page-subtitle">Все форматы, которые я оцифровываю</p>
@@ -1232,6 +1289,13 @@
         <a href="tel:+79166813134"><i class="fas fa-phone mr-2"></i>+7 916 681-31-34</a>
         <a href="https://t.me/RinatZakiroff" target="_blank" rel="noopener noreferrer"><i class="fab fa-telegram mr-2"></i>Telegram</a>
         <a href="https://wa.me/79166813134" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp mr-2"></i>WhatsApp</a>
+        <a href="stoimost.html"><i class="fas fa-ruble-sign mr-2"></i>Стоимость</a>
+        <a href="sroki.html"><i class="fas fa-clock mr-2"></i>Сроки</a>
+        <a href="dostavka.html"><i class="fas fa-truck mr-2"></i>Доставка</a>
+        <a href="tipy-kasset.html"><i class="fas fa-film mr-2"></i>Типы кассет</a>
+        <a href="otzyv.html"><i class="fas fa-star mr-2"></i>Отзывы</a>
+        <a href="remont.html"><i class="fas fa-tools mr-2"></i>Ремонт</a>
+        <a href="zakazat.html"><i class="fas fa-shopping-cart mr-2"></i>Заказать</a>
         <a href="index.html"><i class="fas fa-home mr-2"></i>На главную</a>
     </div>
     <div style="font-size:11px; color:#6b7280; text-transform:uppercase; letter-spacing:0.1em;">© 2024–2026 Rinat Ocifrovka · Москва</div>
