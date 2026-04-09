@@ -226,8 +226,14 @@
             border-color: rgba(220,38,38,0.3);
         }
         .cassette-type-img {
-            max-height: 300px;
+            width: 100%;
+            height: 160px;
             object-fit: contain;
+            object-position: center;
+            display: block;
+        }
+        @media (min-width: 600px) {
+            .cassette-type-img { height: 180px; }
         }
         .cassette-type-title {
             font-size: 24px;
@@ -1155,31 +1161,62 @@
         /* active scale */
         .active\:scale-95:active { transform: scale(0.95) !important; }
 
+        
+
         /* ===== НАВИГАЦИЯ ПО РАЗДЕЛАМ ===== */
         .page-subnav {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 8px;
             margin-bottom: 36px;
         }
         .page-subnav a {
-            font-size: 10px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: #64748b;
+            letter-spacing: 0.08em;
+            color: #374151;
             text-decoration: none;
-            border: 1px solid #e2e8f0;
-            border-radius: 100px;
-            padding: 6px 14px;
+            border: 1.5px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 12px 16px;
             background: #ffffff;
-            transition: border-color 0.2s, color 0.2s;
-            white-space: nowrap;
+            transition: border-color 0.2s, color 0.2s, background 0.2s;
+            white-space: normal;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            line-height: 1.3;
         }
         .page-subnav a:hover {
             border-color: #dc2626;
             color: #dc2626;
+            background: #fff5f5;
+        }
+        .page-subnav a .snav-icon {
+            color: #dc2626;
+            font-size: 15px;
+            flex-shrink: 0;
+            width: 18px;
+            text-align: center;
+        }
+        @media (min-width: 600px) {
+            .page-subnav {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        @media (min-width: 900px) {
+            .page-subnav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .page-subnav a {
+                width: auto;
+                border-radius: 100px;
+                padding: 8px 18px;
+                white-space: nowrap;
+            }
         }
     </style>
     <script type="application/ld+json">
@@ -1234,14 +1271,13 @@
 <main class="page-wrapper">
     <a href="index.html" class="page-back"><i class="fas fa-arrow-left"></i> На главную</a>
 <nav class="page-subnav" aria-label="Разделы сайта">
-    <a href="sroki.html">Сроки</a>
-    <a href="dostavka.html">Доставка</a>
-    <a href="tipy-kasset.html">Типы кассет</a>
-    <a href="format.html">Форматы</a>
-    <a href="oborudovanie.html">Оборудование</a>
-    <a href="otzyv.html">Отзывы</a>
-    <a href="remont.html">Ремонт</a>
-    <a href="zakazat.html">Заказать</a>
+    <a href="sroki.html"><i class="fas fa-clock snav-icon"></i>Сроки</a>
+    <a href="dostavka.html"><i class="fas fa-truck snav-icon"></i>Доставка</a>
+    <a href="format.html"><i class="fas fa-file-video snav-icon"></i>Форматы</a>
+    <a href="oborudovanie.html"><i class="fas fa-video snav-icon"></i>Оборудование</a>
+    <a href="otzyv.html"><i class="fas fa-star snav-icon"></i>Отзывы</a>
+    <a href="remont.html"><i class="fas fa-tools snav-icon"></i>Ремонт</a>
+    <a href="zakazat.html"><i class="fas fa-shopping-cart snav-icon"></i>Заказать</a>
 </nav>
     <i class="fas fa-calculator page-icon"></i>
     <h1 class="page-title">Стоимость оцифровки видеокассет</h1>
@@ -1253,26 +1289,47 @@
     <p class="text-lg leading-relaxed mb-0 text-center"><strong>Минимальный заказ — 2070 ₽</strong> (90 минут видео).</p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-    <div class="soft-card-static" style="cursor:default; align-items:flex-start;">
-        <div class="icon-backdrop"><i class="fas fa-film"></i></div>
-        <h2 class="text-[15px] font-bold uppercase tracking-wider mb-2">Максимальная стоимость</h2>
-        <div class="price-row-list">
-            <div class="price-row-item">
-                <div class="price-row-text"><strong>VHS</strong> — до 180–240 мин. Максимум <strong>4 140 ₽</strong> за полностью записанную кассету.</div>
-            </div>
-            <div class="price-row-item">
-                <div class="price-row-text"><strong>Кассеты от камер</strong> (VHS-C, Video8, Hi8, Digital8, MiniDV) — до <strong>2 070 ₽</strong> за штуку.</div>
-            </div>
-        </div>
-    </div>
-    <div class="soft-card-static" style="cursor:default; align-items:flex-start;">
-        <div class="icon-backdrop"><i class="fas fa-arrow-down"></i></div>
-        <h2 class="text-[15px] font-bold uppercase tracking-wider mb-2">Почему итог обычно ниже</h2>
-        <p class="text-[14px] text-slate-600 leading-relaxed">Кассеты почти никогда не записаны полностью — пустые участки удаляются и не тарифицируются. Фильмы и ТВ-передачи удаляю бесплатно. Вы платите только за личный архив.</p>
-    </div>
-</div>
 
+
+<h2 class="text-[17px] font-bold uppercase tracking-widest text-center mb-6" style="color:#94a3b8;">Типы кассет и их стоимость</h2>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+    <a href="vhs.html" class="soft-card-static" style="text-decoration:none;">
+        <img src="vhsn.jpg" alt="VHS кассета" class="cassette-type-img" loading="lazy">
+        <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:#9ca3af;">Оцифровка</div>
+        <div class="cassette-type-title">VHS</div>
+        <div style="font-size:12px; font-weight:700; color:#dc2626; text-transform:uppercase; letter-spacing:0.05em; margin-top:4px;">до 4 140 ₽</div>
+    </a>
+    <a href="vhs-c.html" class="soft-card-static" style="text-decoration:none;">
+        <img src="vhscn.jpg" alt="VHS-C кассета" class="cassette-type-img" loading="lazy">
+        <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:#9ca3af;">Оцифровка</div>
+        <div class="cassette-type-title">VHS-C</div>
+        <div style="font-size:12px; font-weight:700; color:#dc2626; text-transform:uppercase; letter-spacing:0.05em; margin-top:4px;">до 1 380 ₽</div>
+    </a>
+    <a href="video8.html" class="soft-card-static" style="text-decoration:none;">
+        <img src="video8n.jpg" alt="8mm Video8 кассета" class="cassette-type-img" loading="lazy">
+        <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:#9ca3af;">Оцифровка</div>
+        <div class="cassette-type-title">8mm</div>
+        <div style="font-size:12px; font-weight:700; color:#dc2626; text-transform:uppercase; letter-spacing:0.05em; margin-top:4px;">до 2 070 ₽</div>
+    </a>
+    <a href="hi8.html" class="soft-card-static" style="text-decoration:none;">
+        <img src="hi8n.jpg" alt="Hi8 кассета" class="cassette-type-img" loading="lazy">
+        <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:#9ca3af;">Оцифровка</div>
+        <div class="cassette-type-title">Hi8</div>
+        <div style="font-size:12px; font-weight:700; color:#dc2626; text-transform:uppercase; letter-spacing:0.05em; margin-top:4px;">до 2 070 ₽</div>
+    </a>
+    <a href="digital8.html" class="soft-card-static" style="text-decoration:none;">
+        <img src="digital8n.jpg" alt="Digital8 кассета" class="cassette-type-img" loading="lazy">
+        <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:#9ca3af;">Оцифровка</div>
+        <div class="cassette-type-title">Digital8</div>
+        <div style="font-size:12px; font-weight:700; color:#dc2626; text-transform:uppercase; letter-spacing:0.05em; margin-top:4px;">до 2 070 ₽</div>
+    </a>
+    <a href="minidv.html" class="soft-card-static" style="text-decoration:none;">
+        <img src="minidvn.jpg" alt="MiniDV кассета" class="cassette-type-img" loading="lazy">
+        <div style="font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:0.15em; color:#9ca3af;">Оцифровка</div>
+        <div class="cassette-type-title">MiniDV</div>
+        <div style="font-size:12px; font-weight:700; color:#dc2626; text-transform:uppercase; letter-spacing:0.05em; margin-top:4px;">до 1 380 ₽</div>
+    </a>
+</div>
 <h2 class="text-[17px] font-bold uppercase tracking-widest text-center mb-6" style="color:#94a3b8;">Онлайн-калькулятор</h2>
 <div class="glass-block aluminum-block p-8" style="background:#fff;">
     <div class="calc-grid mb-6">
