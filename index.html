@@ -242,7 +242,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
     
     <style>
-        html { overflow-x: hidden; box-sizing: border-box; }
+        html, body { overflow-x: hidden; }
+        *, *::before, *::after { box-sizing: border-box; }
+        img:not([style*="width:36px"]) { max-width: 100%; height: auto; }
         
         * {
             overflow-wrap: break-word;
@@ -567,13 +569,11 @@
         }
         .tg-float {
             position: fixed;
-            bottom: 24px;
-            left: 0;
-            right: 0;
-            width: -webkit-fit-content;
-            width: fit-content;
-            max-width: calc(100vw - 48px);
-            margin: 0 auto;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            max-width: calc(100vw - 32px);
             z-index: 60;
             background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
             color: #ffffff;
@@ -587,7 +587,6 @@
             transition: opacity 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             border: none;
-            white-space: nowrap;
             animation: btn-bell 4s ease-in-out infinite;
         }
         .tg-float.hidden-btn {
@@ -1123,25 +1122,25 @@
     <a id="floatingTgBtn" href="zakazat.html" class="tg-float">
         <span class="text-[13px] uppercase tracking-widest font-bold">Заказать оцифровку</span>
     </a>
-<header style="position:fixed; top:0; left:0; right:0; z-index:40; background:#dc2626; box-shadow:0 10px 15px -3px rgba(0,0,0,.1); border-bottom:1px solid #b91c1c; box-sizing:border-box;">
-    <div style="max-width:1280px; margin:0 auto; padding:0 20px; height:64px; display:flex; align-items:center; justify-content:space-between; box-sizing:border-box; width:100%;">
-        <a href="index.html" style="display:flex; align-items:center; gap:10px; text-decoration:none; flex-shrink:0; min-width:0;">
-            <div style="width:42px; height:42px; display:flex; align-items:center; justify-content:center; border-radius:10px; overflow:hidden; flex-shrink:0; background:rgba(255,255,255,0.2); border:2px solid #ffffff; box-shadow:0 2px 8px rgba(0,0,0,0.1);">
-                <img src="logo.jpg" alt="Логотип Рината" style="width:100% !important; height:100% !important; object-fit:contain !important; display:block;" onerror="this.parentElement.innerHTML='<i class=\"fas fa-film\" style=\"color:#fff; font-size:14px;\"></i>'">
+<header style="position:fixed;top:0;left:0;right:0;z-index:40;background:#dc2626;box-shadow:0 4px 12px rgba(0,0,0,0.15);border-bottom:1px solid #b91c1c;">
+    <div style="width:100%;max-width:1280px;margin:0 auto;padding:0 16px;height:60px;display:flex;align-items:center;justify-content:space-between;box-sizing:border-box;">
+        <a href="index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;min-width:0;flex-shrink:1;overflow:hidden;">
+            <div style="width:40px;height:40px;min-width:40px;min-height:40px;border-radius:10px;overflow:hidden;background:rgba(255,255,255,0.2);border:2px solid #fff;box-sizing:border-box;flex-shrink:0;">
+                <img src="logo.jpg" alt="Лого" width="36" height="36" style="width:36px;height:36px;object-fit:contain;display:block;" onerror="this.parentElement.innerHTML='<i class=\"fas fa-film\" style=\"color:#fff;font-size:14px;line-height:36px;text-align:center;display:block;\"></i>'">
             </div>
-            <div style="display:flex; flex-direction:column; line-height:1.2; min-width:0;">
-                <span style="font-size:1rem; font-weight:700; color:#ffffff; text-transform:uppercase; letter-spacing:0.08em; font-family:Montserrat,sans-serif; white-space:nowrap;">Rinat Ocifrovka</span>
-                <span style="font-size:8px; font-weight:700; color:#ffdddd; text-transform:uppercase; letter-spacing:0.12em; font-family:Montserrat,sans-serif; white-space:nowrap;">Premium Digital Service</span>
+            <div style="display:flex;flex-direction:column;line-height:1.2;min-width:0;overflow:hidden;">
+                <span style="font-size:15px;font-weight:700;color:#fff;text-transform:uppercase;letter-spacing:0.08em;font-family:Montserrat,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Rinat Ocifrovka</span>
+                <span style="font-size:8px;font-weight:700;color:#ffdddd;text-transform:uppercase;letter-spacing:0.12em;font-family:Montserrat,sans-serif;white-space:nowrap;">Premium Digital Service</span>
             </div>
         </a>
-        <div style="display:flex; align-items:center; gap:8px; flex-shrink:0;">
-            <a href="https://t.me/RinatZakiroff" target="_blank" rel="noopener noreferrer" title="Telegram" style="width:40px; height:40px; border-radius:50%; background:#3b82f6; border:2px solid #3b82f6; display:flex; align-items:center; justify-content:center; text-decoration:none; flex-shrink:0;">
-                <i class="fab fa-telegram" style="color:#fff; font-size:17px;"></i>
+        <div style="display:flex;align-items:center;gap:8px;flex-shrink:0;margin-left:8px;">
+            <a href="https://t.me/RinatZakiroff" target="_blank" rel="noopener noreferrer" title="Telegram" style="width:38px;height:38px;min-width:38px;border-radius:50%;background:#3b82f6;display:flex;align-items:center;justify-content:center;text-decoration:none;flex-shrink:0;">
+                <i class="fab fa-telegram" style="color:#fff;font-size:17px;"></i>
             </a>
-            <a href="https://wa.me/79166813134" target="_blank" rel="noopener noreferrer" title="WhatsApp" style="width:40px; height:40px; border-radius:50%; background:#22c55e; border:2px solid #22c55e; display:flex; align-items:center; justify-content:center; text-decoration:none; flex-shrink:0;">
-                <i class="fab fa-whatsapp" style="color:#fff; font-size:17px;"></i>
+            <a href="https://wa.me/79166813134" target="_blank" rel="noopener noreferrer" title="WhatsApp" style="width:38px;height:38px;min-width:38px;border-radius:50%;background:#22c55e;display:flex;align-items:center;justify-content:center;text-decoration:none;flex-shrink:0;">
+                <i class="fab fa-whatsapp" style="color:#fff;font-size:17px;"></i>
             </a>
-            <a href="zakazat.html" style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#ffffff; border:2px solid #ffffff; padding:8px 14px; border-radius:9999px; text-decoration:none; white-space:nowrap; font-family:Montserrat,sans-serif; flex-shrink:0;">Заказать</a>
+            <a href="zakazat.html" style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#fff;border:2px solid #fff;padding:8px 14px;border-radius:9999px;text-decoration:none;white-space:nowrap;font-family:Montserrat,sans-serif;flex-shrink:0;box-sizing:border-box;">Заказать</a>
         </div>
     </div>
 </header>
@@ -1340,7 +1339,7 @@
                                 Окончательная стоимость обычно значительно ниже, так как кассеты крайне редко записаны полностью
                             </p>
                         </div>
-                        <div style="display:flex; justify-content:center;"><a href="zakazat.html" class="elegant-btn elegant-btn-pulse" style="text-decoration:none; width:auto; min-width:260px; max-width:440px;">Заказать оцифровку</a></div>
+                        <div style="display:flex; justify-content:center;"><a href="zakazat.html" class="elegant-btn elegant-btn-pulse" style="text-decoration:none; width:auto; max-width:440px;">Заказать оцифровку</a></div>
                         <div class="mt-4">
                             <span id="deadlineText" class="text-[12px] uppercase tracking-[0.2em] font-bold text-slate-400 mobile-larger-text">Готово будет уже завтра</span>
                         </div>
